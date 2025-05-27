@@ -11,8 +11,8 @@ st.data_editor(
     df, 
     column_config={
         "time": st.column_config.NumberColumn(
-            "time (minutes)"
-            help="how do you plan to take from the previous depth untill this one?"
+            "time (minutes)",
+            help="how do you plan to take from the previous depth untill this one?",
             format="%d minutes"
         )
     }
