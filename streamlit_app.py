@@ -15,6 +15,6 @@ st.data_editor(
             help="how do you plan to take from the previous depth untill this one?",
             format="%d minutes"
         )
-    }
+    },
     num_rows="dynamic",
     )
