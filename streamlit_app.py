@@ -1,14 +1,30 @@
-import streamlit as st
+from __future__ import annotations
+
 import pandas as pd
+import streamlit as st
 
-df = pd.DataFrame(
-    [
-       {"command": "st.selectbox", "rating": 4, "is_widget": True},
-       {"command": "st.balloons", "rating": 5, "is_widget": False},
-       {"command": "st.time_input", "rating": 3, "is_widget": True},
-   ]
-)
-edited_df = st.data_editor(df,num_rows="dynamic")
 
-favorite_command = edited_df.loc[edited_df["rating"].idxmax()]["command"]
-st.markdown(f"Your favorite command is **{favorite_command}** 🎈")
+def add_c(new_df: pd.DataFrame | None = None):
+    if new_df is not None:
+        if new_df.equals(st.session_state["df"]):
+            return
+
+        st.session_state["df"] = new_df
+
+    st.session_state["df"]["c"] = 0
+    st.session_state["df"]["c"] = (
+        st.session_state["df"]["a"] + st.session_state["df"]["b"]
+    )
+    st.experimental_rerun()
+
+
+if "df" not in st.session_state:
+    st.session_state.df = pd.DataFrame(
+        {"a": [1, 2, 3], "b": [4, 5, 6], "c": [None, None, None]}
+    )
+    add_c()
+
+
+editable_df = st.experimental_data_editor(st.session_state["df"], key="data")
+
+add_c(editable_df)
