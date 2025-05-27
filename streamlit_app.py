@@ -3,9 +3,7 @@ import pandas as pd
 
 df = pd.DataFrame(
     [
-       {"command": "st.selectbox", "rating": 4, "is_widget": True},
-       {"command": "st.balloons", "rating": 5, "is_widget": False},
-       {"command": "st.time_input", "rating": 3, "is_widget": True},
+       {"time": 0, "depth": 0, "pressure":None}
    ]
 )
 edited_df = st.data_editor(df, num_rows="dynamic")
