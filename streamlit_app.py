@@ -28,8 +28,8 @@ st.data_editor(
             disabled=True
         ),
         "calculation": st.column_config.TextColumn(
-            "berekening"
-            default="diepte*tijd*verbruik="
+            "berekening",
+            default="diepte*tijd*verbruik=",
             disabled=True
         )
             
