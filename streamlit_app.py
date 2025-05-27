@@ -20,7 +20,7 @@ st.data_editor(
             help="what depth do you plan to go to?",
             format="%d m"
         ),
-        "pressure"= st.column_config.NumberColumn(
+        "pressure": st.column_config.NumberColumn(
             "druk (bar) (calculated)",
             help="difference in pressure (bar)",
             format="%.1f bar"
