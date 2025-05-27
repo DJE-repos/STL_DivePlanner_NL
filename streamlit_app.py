@@ -17,3 +17,4 @@ st.data_editor(
         )
     }
     num_rows="dynamic",
+    )
