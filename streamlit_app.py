@@ -7,7 +7,9 @@ df = pd.DataFrame(data=
    ]
 )
 
-st.button("recalculate")
+if st.button("recalculate")
+    st.markdown("recalculating")
+
 
 def calculate():
     df.reset_index()
