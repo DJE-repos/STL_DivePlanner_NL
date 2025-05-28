@@ -12,12 +12,6 @@ if st.button("recalculate"):
     running_sum=runningsum.fillna(1)
     df.iloc[:,2]=running_sum
     
-    
-        
-
-
-def calculate():
-    for index, rows in df
         
     
 st.data_editor(
