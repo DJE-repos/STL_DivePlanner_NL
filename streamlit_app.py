@@ -44,4 +44,5 @@ edited_df=st.data_editor(
 
 if st.button("recalculate"):
     st.session_state.df["pressure"]=15
+    st.markdown("test")
     
