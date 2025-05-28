@@ -7,7 +7,7 @@ df = pd.DataFrame(data=
    ]
 )
 
-if st.button("recalculate")
+if st.button("recalculate"):
     st.markdown("recalculating")
 
 
