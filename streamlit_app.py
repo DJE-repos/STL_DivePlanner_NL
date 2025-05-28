@@ -10,7 +10,7 @@ if "df" not in st.session_state:
     )
 
 @st.fragment()
-def air_plan_table(run_every="10s"):
+def air_plan_table():
     edited_df=st.data_editor(
         st.session_state.df, 
         column_config={
@@ -44,10 +44,12 @@ def air_plan_table(run_every="10s"):
         },
         num_rows="dynamic",
         )
+    if st.button("recalculate"):
+        st.session_state.df["pressure"]=15
+        st.markdown("test")
+        st.rerun()
 air_plan_table()
 
-if st.button("recalculate"):
-    st.session_state.df["pressure"]=15
-    st.markdown("test")
+
 
     
