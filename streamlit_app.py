@@ -1,11 +1,12 @@
 import streamlit as st
 import pandas as pd
 
-df = pd.DataFrame(data=
-    [
-       {"time": 0, "depth": 0, "pressure":1,"calculation":"diepte*tijd*verbruik=","air_used":0 }
-   ]
-)
+if "df" not in st.session_state:
+    st.session_state.df = pd.DataFrame(data=
+        [
+           {"time": 0, "depth": 0, "pressure":1,"calculation":"diepte*tijd*verbruik=","air_used":0 }
+       ]
+    )
    
 edited_df=st.data_editor(
 df, 
