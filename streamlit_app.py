@@ -8,7 +8,12 @@ df = pd.DataFrame(data=
 )
 
 if st.button("recalculate"):
-    st.markdown("recalculating")
+    try:
+        calculate()
+        st.markdown("done recalculating")
+    except Exception as e:
+        st.markdown("an error occured"+e)
+        
 
 
 def calculate():
