@@ -12,7 +12,7 @@ if st.button("recalculate"):
         calculate()
         st.markdown("done recalculating")
     except Exception as e:
-        st.markdown("an error occured"+e)
+        st.markdown(str("an error occured"+e))
         
 
 
