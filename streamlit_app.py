@@ -6,14 +6,8 @@ df = pd.DataFrame(data=
        {"time": 0, "depth": 0, "pressure":1,"calculation":"diepte*tijd*verbruik=","air_used":0 }
    ]
 )
-
-if st.button("recalculate"):
-    running_sum=df["depth"]+df["depth"].shift(1)
-    df.iloc[:,2]=running_sum
-    
-        
-    
-st.data_editor(
+   
+data_editor=st.data_editor(
 df, 
 column_config={
     "time": st.column_config.NumberColumn(
@@ -25,14 +19,16 @@ column_config={
     "depth": st.column_config.NumberColumn(
         "diepte (m)",
         help="what depth do you plan to go to?",
-        format="%d m"
+        format="%d m",
+        default=0
     ),
     
     "pressure": st.column_config.NumberColumn(
         "druk (bar)",
         help="difference in pressure (bar)",
         format="%.1f bar",
-        disabled=True
+        disabled=True,
+        default=0
     ),
     "calculation": st.column_config.TextColumn(
         "berekening",
@@ -44,3 +40,6 @@ column_config={
 },
 num_rows="dynamic",
 )
+if st.button("recalculate):
+    edited_df["pressure"]=15
+    st.write(edited_df)
