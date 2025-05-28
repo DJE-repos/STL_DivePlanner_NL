@@ -13,7 +13,8 @@ st.data_editor(
         "time": st.column_config.NumberColumn(
             "tijd (minuten)",
             help="how do you plan to take from the previous depth untill this one?",
-            format="%d min"
+            format="%d min",
+            default=0
         ),
         "depth": st.column_config.NumberColumn(
             "diepte (m)",
@@ -22,7 +23,7 @@ st.data_editor(
         ),
         
         "pressure": st.column_config.NumberColumn(
-            "druk (bar) (calculated)",
+            "druk (bar)",
             help="difference in pressure (bar)",
             format="%.1f bar",
             disabled=True
@@ -32,6 +33,7 @@ st.data_editor(
             default="diepte*tijd*verbruik=",
             disabled=True
         )
+        
             
     },
     num_rows="dynamic",
