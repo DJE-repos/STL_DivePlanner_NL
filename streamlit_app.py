@@ -41,6 +41,6 @@ column_config={
 num_rows="dynamic",
 )
 
-if st.button("recalculate):
+if st.button("recalculate"):
     edited_df["pressure"]=15
     st.write(edited_df)
