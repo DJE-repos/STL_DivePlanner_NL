@@ -10,7 +10,7 @@ if "df" not in st.session_state:
     )
 
 @st.fragment()
-def air_plan_table(run_every=10s):
+def air_plan_table(run_every="10s"):
     edited_df=st.data_editor(
         st.session_state.df, 
         column_config={
