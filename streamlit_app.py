@@ -7,7 +7,7 @@ df = pd.DataFrame(data=
    ]
 )
    
-data_editor=st.data_editor(
+edited_df=st.data_editor(
 df, 
 column_config={
     "time": st.column_config.NumberColumn(
