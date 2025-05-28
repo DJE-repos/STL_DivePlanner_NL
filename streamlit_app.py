@@ -9,7 +9,7 @@ df = pd.DataFrame(data=
 
 if st.button("recalculate"):
     running_sum=df["depth"]+df["depth"].shift(1)
-    running_sum=runningsum.fillna(1)
+    running_sum=running_sum.fillna(1)
     df.iloc[:,2]=running_sum
     
         
