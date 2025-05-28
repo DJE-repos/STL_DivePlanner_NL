@@ -44,7 +44,7 @@ def air_plan_table(run_every="10s"):
         },
         num_rows="dynamic",
         )
-air_plan_table
+air_plan_table()
 
 if st.button("recalculate"):
     st.session_state.df["pressure"]=15
