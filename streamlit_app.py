@@ -8,17 +8,17 @@ df = pd.DataFrame(data=
 )
 
 if st.button("recalculate"):
-    try:
-        calculate()
-        st.markdown("done recalculating")
-    except Exception as e:
-        st.markdown(str("an error occured"+e))
+    running_sum=df["depth"]+df["depth"].shift(1)
+    running_sum=runningsum.fillna(1)
+    df.iloc[:,2]=running_sum
+    
+    
         
 
 
 def calculate():
-    df.reset_index()
-
+    for index, rows in df
+        
     
 st.data_editor(
 df, 
