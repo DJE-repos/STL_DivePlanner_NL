@@ -47,7 +47,7 @@ def air_plan_table():
         num_rows="dynamic",
         )
     if st.button("recalculate"):
-        st.session_state.df["calculation"]=st.session_state.df["time"] + "min *"+st.session_state.df["pressure"]
+        st.session_state.df["calculation"]=str(st.session_state.df["time"] + "min *"+st.session_state.df["pressure"])
         st.markdown("test")
         st.rerun()
 air_plan_table()
