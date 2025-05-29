@@ -49,8 +49,9 @@ def air_plan_table():
     if st.button("recalculate"):
         for i in range(len(df)):
             st.session_state.df.loc[i,"calculation"]=str(st.session_state.df.loc[i,"time"] + "min *"+st.session_state.df.loc[i,"pressure"])
-        st.markdown("test")
         st.rerun()
+        st.markdown("test")
+        
 air_plan_table()
 
 
