@@ -2,6 +2,8 @@ import streamlit as st
 import pandas as pd
 
 st.title("my awesome app")
+air_useage=21
+
 if "df" not in st.session_state:
     st.session_state.df = pd.DataFrame(data=
         [
@@ -45,7 +47,7 @@ def air_plan_table():
         num_rows="dynamic",
         )
     if st.button("recalculate"):
-        st.session_state.df["pressure"]=15
+        st.session_state.df["calculation"]=df["time"] + "min *"+df["pressure"]
         st.markdown("test")
         st.rerun()
 air_plan_table()
